@@ -41,7 +41,7 @@ while np.any(s > 0) and np.any(d > 0): #Kiểm tra xem còn phần tử nào tro
         real_cost = np.where(real_mask, cost[:, :n], np.inf) #Nếu real_mask là true, real_cost được gán bằng cost, nếu không sẽ gán inf
 
         if np.any(real_mask): #Nếu vần còn phần tử true trong real_mask
-            a, b = np.unravel_index(np.argmin(real_cost), real_cost.shape) #gán a là vị trí phần tử nhỏ nhất của real_cost, b là kích thước của real_cost
+            a, b = np.unravel_index(np.argmin(real_cost), real_cost.shape) #gán a, b là vị trí có chỉ số nỏ nhất trong real_cost
         else: #nếu không
             masked_cost = np.where(mask, cost, np.inf)#Lấy phần tử bao gồm cả biến giả
             a, b = np.unravel_index(np.argmin(masked_cost), masked_cost.shape)
@@ -49,7 +49,7 @@ while np.any(s > 0) and np.any(d > 0): #Kiểm tra xem còn phần tử nào tro
         masked_cost = np.where(mask, cost, np.inf)
         a, b = np.unravel_index(np.argmin(masked_cost), masked_cost.shape)
 
-    x = min(s[a], d[b]) 
+    x = min(s[a], d[b]) #ta có s[a] và d[b] là 2 giá trị cấu thành nên real_cost nhỏ nhất, ta tìm xem giá trị nào nhỏ nhất rồi gán cho x
     allocation[a][b] = x
     s[a] -= x
     d[b] -= x
