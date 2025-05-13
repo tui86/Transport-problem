@@ -1,3 +1,14 @@
+import subprocess
+import sys
+def install_module():
+    module_name="numpy"
+    try:    
+        __import__(module_name.replace("-", "_"))
+    except ImportError:
+        print(f"Chưa tìm thấy {module_name}. Đang tiến hành cài đặt...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", module_name])
+        print(f"{module_name} đã được cài đặt thành công!")
+install_module()
 import numpy as np
 m=int(input("Nhập số lượng khu vực các điểm kinh tế: "))
 print("Nhập khối lượng hàng của từng điểm(tấn): ")
