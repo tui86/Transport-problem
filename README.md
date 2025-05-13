@@ -28,4 +28,4 @@ Chương trình có thể giúp người dùng đưa ra cách thức vận chuy�
 - Lưu ý: Một biến giả A_m+1 (hoặc B_n+1) khi cung (hoặc cầu) bé hơn cái còn lại
 ## Lưu ý:
 - Ưu tiên chương trình hoạt động trên điều hành Windows
-- Vui lòng tải thư viện numpy của python trước khi chạy chương trình
+- Trong lần chạy đầu tiên của chương trình, hệ thống sẽ tự động cài thư viện numpy trong trường bạn chưa cài
