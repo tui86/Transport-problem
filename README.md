@@ -1,7 +1,6 @@
 # Bài toán vận tải
 Chương trình có thể giúp người dùng đưa ra cách thức vận chuyển hàng hoá sao cho tiết kiệm chi phí vận chuyển nhất
 ## Thông tin:
-- **Họ và tên:** Lê Bá Nguyên
 - **Tên**: Bài toán vận tải
 ## Tính năng:
 - Đưa ra các hướng dẫn nhằm vận chuyển hàng từ các điểm cung đến các điểm cầu sao cho tổng chi phí vận chuyển là ít nhất
